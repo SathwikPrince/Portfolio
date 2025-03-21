@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sathwik Chinta | Portfolio</title>
+    <link rel="stylesheet" href="R2.css">
+    <script defer src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <style>
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Space between icons */
+            margin-top: 10px;
+        }
+        .icon-img {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="bubble-bg"></div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Get in Touch</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home" class="hero">
+        <h1>I'm <span class="neon-text">Sathwik Chinta</span></h1>
+        <p class="subtitle" id="dynamic-text">Python Full Stack Developer</p>
+        <img src="profile.jpg" alt="Sathwik Chinta" class="profile-pic animated-pic">
+        <div class="social-icons">
+            <a href="https://github.com/SathwikPrince" target="_blank">
+                <img src="Github.png" alt="GitHub" class="icon-img">
+            </a>
+            <a href="https://www.linkedin.com/in/sathwikchinta/" target="_blank">
+                <img src="linkedin.png" alt="LinkedIn" class="icon-img">
+            </a>
+            <a href="https://www.naukri.com/mnjuser/profile" target="_blank">
+                <img src="Na.png" alt="Naukri" class="icon-img">
+            </a>
+        </div>
+    </section>
+    
+    <section id="about" data-aos="fade-up" class="section-card">
+        <h2>About Me</h2>
+        <p>"I'm a passionate Software DevOps Engineer skilled in Python, Django, AWS, SQL, and automation. I specialize in building scalable apps, optimizing cloud infrastructure, and automating workflows. With expertise in DSA, software testing, and RPA, I focus on secure, high-performance solutions and seamless deployments in production."
+
+        </p>
+    </section>
+    
+    <section id="projects" data-aos="fade-up" class="section-card">
+        <h2>Projects</h2>
+        <div class="project-card">Social Media App - Developed authentication and user posts using Django.</div>
+        <div class="project-card">E-commerce Website - Built product listings, shopping cart, and secure payments.</div>
+        <div class="project-card">Automatic Music Genre Classification - AI-powered system to classify music genres.</div>
+        <div class="project-card">Portfolio Website - Built a dynamic and responsive personal portfolio.</div>
+    </section>
+    
+    <section id="skills" data-aos="fade-up" class="section-card">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill">Python</div>
+            <div class="skill">Django</div>
+            <div class="skill">AWS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">Cloud Computing</div>
+        </div>
+    </section>
+    
+    <section id="certifications" data-aos="fade-up" class="section-card">
+        <h2>Certifications</h2>
+        <ul>
+            <li><a href="https://drive.google.com/file/d/1eLpulguetusJ2HTBuSIXqLt0CDGbAfN8/view" style="text-decoration: none;">RPA Certification</a></li>
+            <li><a href="https://drive.google.com/file/d/1ROT4mGODoZMv6vZlTWI25-YrHqd4snBi/view" style="text-decoration: none;">AI & ML Using Python</a></li>
+            <li><a href="https://drive.google.com/file/d/166sLR9l76dWgLIIVGANDkZqZzvv-pERp/view" style="text-decoration: none;">Python Foundation</a></li>
+            <li><a href="https://drive.google.com/file/d/1C2ESoFX4lYf9C1Cb1qkVz8L4oVfp9ino/view" style="text-decoration: none;">Python for Data Science</a></li>
+        </ul>
+    </section>
+    
+    <section id="contact" data-aos="fade-up" class="section-card">
+        <h2>Get in Touch</h2>
+        <p>Email: sathwikprince2004@gmail.com</p>
+        <p>Location: Vijayawada, India</p>
+    </section>
+    
+    <footer>
+        <p>Made with ❤ by Sathwik Chinta | © 2025 All rights reserved.</p>
+    </footer>
+
+    <script>
+        AOS.init();
+        const titles = ["Python Full Stack Developer", "Problem Solver", "Cloud Computing Enthusiast"];
+        let index = 0;
+        setInterval(() => {
+            document.getElementById("dynamic-text").textContent = titles[index];
+            index = (index + 1) % titles.length;
+        }, 3000);
+    </script>
+</body>
+</html>
